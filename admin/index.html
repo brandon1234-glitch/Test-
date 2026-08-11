@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>TIMBER CREEK GOLDEN RETRIEVERS | Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="upload.css" />
+  </head>
+  <body class="admin-page">
+    <main class="admin-view">
+      <div class="admin-shell">
+        <a class="back-link" href="../public/index.html">← Back to the public site</a>
+        <section id="login-panel" class="login-panel">
+          <p class="eyebrow">Private access</p><h1>Welcome<br /><em>to your workspace.</em></h1>
+          <p>Manage TIMBER CREEK GOLDEN RETRIEVERS articles from this private admin area.</p>
+          <form id="login-form"><label>Administrator email<input id="admin-email" type="email" value="admin@gmail.com" required /></label><label>Password<input id="admin-password" type="password" placeholder="Enter your password" autocomplete="current-password" required /></label><button class="button button-dark" type="submit">Open dashboard ↗</button><small>Administrator account: <b>admin@gmail.com</b> · password: <b>sun goes down</b>.</small></form>
+        </section>
+        <section id="dashboard" class="dashboard hidden">
+          <div class="dashboard-top"><div><p class="eyebrow">Private admin area</p><h1>Dashboard</h1></div><button id="logout" class="text-button">Log out</button></div>
+          <div class="dashboard-summary"><div><strong id="dashboard-count">03</strong><span>Published articles</span></div><div><strong>∞</strong><span>Curious readers</span></div><button id="add-article" class="button button-coral">+ New article</button></div>
+          <div class="manage-list" id="manage-list"></div>
+        </section>
+      </div>
+    </main>
+    <dialog id="article-dialog"><form method="dialog" id="article-form"><div class="dialog-heading"><h2 id="dialog-title">New article</h2><button value="cancel" class="close-button" aria-label="Close">×</button></div><label>Article image<input id="article-image" type="file" accept="image/jpeg,image/png,image/webp" /><small>JPG, PNG or WebP · maximum 2 MB</small></label><img id="image-preview" class="image-preview hidden" alt="Selected article preview" /><label>Title<input id="article-title" required /></label><label>Category<input id="article-category" placeholder="Portrait, society..." required /></label><label>Summary<textarea id="article-excerpt" rows="4" required></textarea></label><label>Price (USD)<input id="article-price" type="number" min="0" step="1" placeholder="150" required /></label><label>Cover color<select id="article-color"><option value="terracotta">Terracotta</option><option value="ochre">Ochre</option><option value="sage">Sage</option></select></label><button class="button button-dark" type="submit">Publish article</button></form></dialog>
+    <script src="admin.js"></script>
+  </body>
+</html>
